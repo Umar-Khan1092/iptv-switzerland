@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, Send } from 'lucide-react';
-import { motion } from 'framer-motion';
+// motion removed for performance
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ const Contact = () => {
       <section className="section" style={{ paddingTop: '140px', minHeight: '80vh' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '60px', alignItems: 'center' }}>
           
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+          <div className="fade-in">
             <h1 className="section-title" style={{ textAlign: 'left', marginBottom: '20px' }}>Get in Touch</h1>
             <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)', marginBottom: '40px' }}>
               Our dedicated multilingual customer support team is available 24 hours a day, 7 days a week to assist Switzerland IPTV subscribers with installation, troubleshooting, and account management.
@@ -47,9 +47,9 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
+          <div className="fade-in">
             <div className="glass-panel" style={{ padding: '40px', borderTop: '4px solid var(--color-yellow)' }}>
               <h2 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '30px' }}>Send a Message</h2>
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -74,7 +74,7 @@ const Contact = () => {
                 </a>
               </form>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </section>

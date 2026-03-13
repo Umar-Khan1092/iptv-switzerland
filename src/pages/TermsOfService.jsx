@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+// motion removed for performance
 import { FileText } from 'lucide-react';
 
 const TermsOfService = () => {
@@ -13,7 +13,7 @@ const TermsOfService = () => {
 
       <section className="section" style={{ paddingTop: '120px' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="glass-panel" style={{ padding: '60px', borderTop: '4px solid var(--color-yellow)' }}>
+          <div className="glass-panel fade-in" style={{ padding: '60px', borderTop: '4px solid var(--color-yellow)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
               <div style={{ padding: '20px', background: 'rgba(241, 196, 15, 0.1)', borderRadius: '20px' }}>
                 <FileText size={48} color="var(--color-yellow)" />
@@ -319,7 +319,7 @@ const TermsOfService = () => {
               </ul>
 
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

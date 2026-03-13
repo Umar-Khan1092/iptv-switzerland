@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion, AnimatePresence } from 'framer-motion';
+// motion removed for performance
 import { useState } from 'react';
 import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
 
@@ -25,39 +25,40 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         }}
       >
         <span style={{ fontSize: '1.1rem', fontWeight: '600', paddingRight: '20px' }}>{question}</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        <div
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform 0.3s ease'
+          }}
         >
           <ChevronDown size={24} color={isOpen ? 'var(--color-green)' : 'var(--color-white)'} />
-        </motion.div>
+        </div>
       </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ overflow: 'hidden' }}
-          >
-            <div style={{
-              padding: '25px',
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px solid var(--color-green)',
-              borderTop: 'none',
-              borderRadius: '0 0 16px 16px',
-              color: 'rgba(255,255,255,0.85)',
-              lineHeight: 1.6,
-              fontSize: '1rem'
-            }}>
-              {answer}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        style={{ 
+          overflow: 'hidden',
+          maxHeight: isOpen ? '1000px' : '0',
+          opacity: isOpen ? 1 : 0,
+          transition: 'all 0.4s ease-in-out'
+        }}
+      >
+        <div style={{
+          padding: '25px',
+          background: 'rgba(255,255,255,0.02)',
+          border: '1px solid var(--color-green)',
+          borderTop: 'none',
+          borderRadius: '0 0 16px 16px',
+          color: 'rgba(255,255,255,0.85)',
+          lineHeight: 1.6,
+          fontSize: '1rem'
+        }}>
+          {answer}
+        </div>
+      </div>
     </div>
   );
 };

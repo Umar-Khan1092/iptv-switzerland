@@ -1,21 +1,10 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+// motion removed for performance
 import { Zap, MonitorPlay, Tv, Smartphone, ShieldCheck, HeadphonesIcon, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Features = ({ isEmbedded = false }) => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 }
-  };
+  // variants removed for performance
 
   return (
     <>
@@ -29,7 +18,7 @@ const Features = ({ isEmbedded = false }) => {
 
       <section className="section" style={{ paddingTop: isEmbedded ? '60px' : '120px', paddingBottom: isEmbedded ? '60px' : undefined }}>
         <div className="container markdown-content">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <div className="fade-in">
             {isEmbedded ? (
               <h2 className="section-title">Why IPTV Smarters Is the Best IPTV Player for Switzerland Subscribers</h2>
             ) : (
@@ -39,15 +28,12 @@ const Features = ({ isEmbedded = false }) => {
               Stop settling for unstable streams, outdated interfaces, and IPTV apps that crash under pressure. Our comprehensive platform is purpose-built for subscribers who demand consistent HD and 4K performance, intuitive navigation, and the flexibility to watch on any device — anywhere in Switzerland or around the world.
             </p>
 
-            <motion.div 
+            <div 
               className="features-grid"
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
               style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}
             >
               
-              <motion.div variants={itemVariants} className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-green)' }}>
+              <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-green)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(46, 204, 113, 0.1)', borderRadius: '15px' }}><Zap size={32} color="var(--color-green)" /></div>
                   <h3 style={{ margin: 0, fontSize: '1.4rem' }}>Zero-Buffer Playback</h3>
@@ -56,9 +42,9 @@ const Features = ({ isEmbedded = false }) => {
                 <div style={{ marginTop: '15px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
                   <strong>Why it matters:</strong> No frozen screens during Champions League finals. Just smooth, responsive streaming.
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div variants={itemVariants} className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-yellow)' }}>
+              <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-yellow)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(241, 196, 15, 0.1)', borderRadius: '15px' }}><MonitorPlay size={32} color="var(--color-yellow)" /></div>
                   <h3 style={{ margin: 0, fontSize: '1.4rem' }}>4K Ultra HD & 1080p</h3>
@@ -67,9 +53,9 @@ const Features = ({ isEmbedded = false }) => {
                 <div style={{ marginTop: '15px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
                   <strong>Why it matters:</strong> Your 4K television deserves 4K content, delivering the sharpest picture without downscaling.
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div variants={itemVariants} className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-pink)' }}>
+              <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-pink)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(232, 67, 147, 0.1)', borderRadius: '15px' }}><Tv size={32} color="var(--color-pink)" /></div>
                   <h3 style={{ margin: 0, fontSize: '1.4rem' }}>All-in-One: TV, VOD, Catch-Up</h3>
@@ -80,9 +66,9 @@ const Features = ({ isEmbedded = false }) => {
                   <li><CheckCircle size={14} color="var(--color-green)" style={{ marginRight: '5px' }} /> 7-day catch-up TV</li>
                   <li><CheckCircle size={14} color="var(--color-green)" style={{ marginRight: '5px' }} /> 50,000+ VOD titles</li>
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div variants={itemVariants} className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-orange)' }}>
+              <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-orange)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(230, 126, 34, 0.1)', borderRadius: '15px' }}><Smartphone size={32} color="var(--color-orange)" /></div>
                   <h3 style={{ margin: 0, fontSize: '1.4rem' }}>Universal Device Compatibility</h3>
@@ -91,9 +77,9 @@ const Features = ({ isEmbedded = false }) => {
                 <div style={{ marginTop: '15px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
                   <strong>Why it matters:</strong> One single Switzerland IPTV subscription for up to 5 simultaneous multi-device connections.
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div variants={itemVariants} className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-red)' }}>
+              <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-red)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(231, 76, 60, 0.1)', borderRadius: '15px' }}><ShieldCheck size={32} color="var(--color-red)" /></div>
                   <h3 style={{ margin: 0, fontSize: '1.4rem' }}>Security & Parental Controls</h3>
@@ -102,9 +88,9 @@ const Features = ({ isEmbedded = false }) => {
                 <div style={{ marginTop: '15px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
                   <strong>Why it matters:</strong> Total peace of mind that your subscription is secure and your children are protected.
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div variants={itemVariants} className="glass-panel" style={{ padding: '30px', borderTop: '4px solid #3498db' }}>
+              <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid #3498db' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(52, 152, 219, 0.1)', borderRadius: '15px' }}><HeadphonesIcon size={32} color="#3498db" /></div>
                   <h3 style={{ margin: 0, fontSize: '1.4rem' }}>24/7 Professional Support</h3>
@@ -113,11 +99,11 @@ const Features = ({ isEmbedded = false }) => {
                 <div style={{ marginTop: '15px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>
                   <strong>Why it matters:</strong> You're never left troubleshooting alone. Fast, expert, human support anytime you need it.
                 </div>
-              </motion.div>
+              </div>
 
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants} style={{ textAlign: 'center', marginTop: '60px' }}>
+            <div style={{ textAlign: 'center', marginTop: '60px' }}>
               <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '20px', color: 'var(--color-white)' }}>Ready to Experience Smarter Television?</h2>
               <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)', marginBottom: '30px', maxWidth: '600px', margin: '0 auto 30px auto' }}>
                 Join thousands of satisfied Switzerland IPTV subscribers who have already made the switch to smarter, faster, more flexible television.
@@ -126,9 +112,9 @@ const Features = ({ isEmbedded = false }) => {
                 <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '16px 32px' }}>View Pricing Plans</a>
                 <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 32px' }}>Contact Support</a>
               </div>
-            </motion.div>
+            </div>
 
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

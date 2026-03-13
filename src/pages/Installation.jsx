@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Smartphone, MonitorPlay, Tv, Laptop, ChevronRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+// motion removed for performance
 
 const Installation = () => {
   return (
@@ -13,7 +13,7 @@ const Installation = () => {
 
       <section className="section" style={{ paddingTop: '120px' }}>
         <div className="container markdown-content">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <div className="fade-in">
             <h1 className="section-title">Complete IPTV Switzerland Setup Instructions for Every Device</h1>
             <p className="lead" style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '40px' }}>
               Setting up your Switzerland IPTV subscription has never been easier. Whether you're watching on a Smart TV in Zurich, streaming via Firestick in Geneva, or using your iPhone in Basel, this comprehensive installation guide walks you through the full setup process on every major device — step by step. Our Switzerland IPTV service delivers over 10,000 live channels including SRF 1, SRF zwei, RTS Un, RTS Deux, RSI LA 1, and hundreds of international sports and entertainment networks, all in HD and 4K quality. Most users complete their setup in under five minutes with zero technical experience required.
@@ -140,7 +140,7 @@ const Installation = () => {
 
             </div>
 
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

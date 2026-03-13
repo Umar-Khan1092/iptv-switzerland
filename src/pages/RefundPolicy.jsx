@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+// motion removed for performance
 import { BadgeSwissFranc } from 'lucide-react';
 
 const RefundPolicy = () => {
@@ -13,7 +13,7 @@ const RefundPolicy = () => {
 
       <section className="section" style={{ paddingTop: '120px' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="glass-panel" style={{ padding: '60px', borderTop: '4px solid var(--color-pink)' }}>
+          <div className="glass-panel fade-in" style={{ padding: '60px', borderTop: '4px solid var(--color-pink)' }}>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
               <div style={{ padding: '20px', background: 'rgba(232, 67, 147, 0.1)', borderRadius: '20px' }}>
@@ -381,7 +381,7 @@ const RefundPolicy = () => {
               </ul>
 
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+// motion removed for performance
 import { ShieldAlert } from 'lucide-react';
 
 const PrivacyPolicy = () => {
@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
 
       <section className="section" style={{ paddingTop: '120px' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="glass-panel" style={{ padding: '60px', borderTop: '4px solid var(--color-green)' }}>
+          <div className="glass-panel fade-in" style={{ padding: '60px', borderTop: '4px solid var(--color-green)' }}>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '40px' }}>
               <div style={{ padding: '20px', background: 'rgba(46, 204, 113, 0.1)', borderRadius: '20px' }}>
@@ -389,7 +389,7 @@ const PrivacyPolicy = () => {
               </ul>
 
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

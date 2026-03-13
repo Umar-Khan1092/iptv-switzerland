@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Check, Tv, Film, MonitorPlay, Smartphone, Users, RotateCcw, CalendarClock, Zap, ShieldCheck, HeadphonesIcon } from 'lucide-react';
-import { motion } from 'framer-motion';
+// motion removed for performance
 
 const Pricing = ({ isEmbedded = false }) => {
   const plans = [
@@ -48,12 +48,9 @@ const Pricing = ({ isEmbedded = false }) => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
             {plans.map((plan, index) => (
-              <motion.div
+              <div
                 key={plan.title}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-panel"
+                className="glass-panel fade-in"
                 style={{
                   padding: '40px 30px',
                   display: 'flex',
@@ -103,7 +100,7 @@ const Pricing = ({ isEmbedded = false }) => {
                 <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" style={{ width: '100%', padding: '16px', display: 'block', textAlign: 'center', boxSizing: 'border-box' }} className={`btn ${plan.highlight ? 'btn-primary' : 'btn-secondary'}`}>
                   Choose {plan.title}
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
 
