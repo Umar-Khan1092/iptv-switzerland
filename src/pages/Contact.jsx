@@ -32,7 +32,7 @@ const Contact = () => {
                   <Mail size={32} color="var(--color-green)" />
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-white)', marginBottom: '5px' }}>Email Support</h4>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-white)', marginBottom: '5px' }}>Email Support</h3>
                   <a href="mailto:support@gmail.com" style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)' }}>support@gmail.com</a>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Contact = () => {
                   <Phone size={32} color="var(--color-pink)" />
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-white)', marginBottom: '5px' }}>WhatsApp (24/7)</h4>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--color-white)', marginBottom: '5px' }}>WhatsApp (24/7)</h3>
                   <a href="https://wa.me/447412300833" style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)' }}>+44 7412 300833</a>
                 </div>
               </div>

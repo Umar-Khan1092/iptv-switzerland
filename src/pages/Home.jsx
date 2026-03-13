@@ -53,9 +53,9 @@ const Home = () => {
           
           {/* Text Content */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
             style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}
           >
             <div style={{ display: 'inline-block', padding: '8px 16px', borderRadius: '30px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', alignSelf: 'flex-start' }}>
@@ -122,7 +122,7 @@ const Home = () => {
                     <Monitor size={24} color="var(--color-green)" />
                   </div>
                   <div>
-                    <h4 style={{ fontWeight: '700', fontSize: '1.2rem' }}>All Devices</h4>
+                    <h3 style={{ fontWeight: '700', fontSize: '1.2rem' }}>All Devices</h3>
                     <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>Smart TV, PC, Mobile</p>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const Home = () => {
                     <Shield size={24} color="var(--color-pink)" />
                   </div>
                   <div>
-                    <h4 style={{ fontWeight: '700', fontSize: '1.2rem' }}>Anti-Freeze</h4>
+                    <h3 style={{ fontWeight: '700', fontSize: '1.2rem' }}>Anti-Freeze</h3>
                     <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>Zero Buffering Tech</p>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ const Home = () => {
                     <Calendar size={24} color="var(--color-yellow)" />
                   </div>
                   <div>
-                    <h4 style={{ fontWeight: '700', fontSize: '1.2rem' }}>Catch-Up</h4>
+                    <h3 style={{ fontWeight: '700', fontSize: '1.2rem' }}>Catch-Up</h3>
                     <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>7 Days Replay TV</p>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ const Home = () => {
                     <Zap size={24} color="var(--color-orange)" />
                   </div>
                   <div>
-                    <h4 style={{ fontWeight: '700', fontSize: '1.2rem' }}>4K/HD Quality</h4>
+                    <h3 style={{ fontWeight: '700', fontSize: '1.2rem' }}>4K/HD Quality</h3>
                     <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>Crystal Clear Picture</p>
                   </div>
                 </div>

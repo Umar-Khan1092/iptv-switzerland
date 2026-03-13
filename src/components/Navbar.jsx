@@ -55,7 +55,7 @@ const Navbar = () => {
             border: '2px solid var(--color-green)',
             boxShadow: '0 0 15px rgba(46, 204, 113, 0.3)'
           }}>
-            <img src="/src/assets/logo.avif" alt="Switzerland IPTV Logo" width="50" height="50" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/logo.avif" alt="Switzerland IPTV Logo" width="50" height="50" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <span style={{ fontSize: '1.5rem', fontWeight: '800', background: 'var(--success-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             IPTV Suisse
@@ -85,9 +85,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="mobile-toggle" style={{ display: 'none', cursor: 'pointer' }} onClick={toggleMenu}>
+        <button 
+          className="mobile-toggle" 
+          style={{ display: 'none', cursor: 'pointer', background: 'none', border: 'none', color: 'inherit', padding: '10px' }} 
+          onClick={toggleMenu}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </div>
+        </button>
       </div>
 
       {/* Mobile Nav */}

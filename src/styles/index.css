@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+/* Google Fonts moved to index.html for performance */
 
 :root {
   --color-green: #2ecc71;
@@ -12,7 +12,7 @@
   --color-light-gray: #f5f6fa;
   --color-white: #ffffff;
   --color-text: #2d3436;
-  --color-text-muted: #636e72;
+  --color-text-muted: #a0a0a0; /* Improved contrast for accessibility (WCAG AA) */
   --nav-height: 80px;
 
   /* Gradient Palette */

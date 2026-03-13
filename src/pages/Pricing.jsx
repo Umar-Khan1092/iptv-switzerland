@@ -36,7 +36,11 @@ const Pricing = ({ isEmbedded = false }) => {
       <section className="section" style={{ paddingTop: isEmbedded ? '60px' : '120px', paddingBottom: isEmbedded ? '60px' : undefined }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <h1 className="section-title">Transparent & Flexible Prices</h1>
+            {isEmbedded ? (
+              <h2 className="section-title">Transparent & Flexible Prices</h2>
+            ) : (
+              <h1 className="section-title">Transparent & Flexible Prices</h1>
+            )}
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
               Every plan includes the complete 10,000+ channel catalog, 50,000+ VODs, and 24/7 multilingual support. Pick a duration that suits your routine.
             </p>

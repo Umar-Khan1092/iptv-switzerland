@@ -131,7 +131,11 @@ const FAQ = ({ isEmbedded = false }) => {
                 <MessageCircleQuestion size={40} color="var(--color-pink)" />
               </div>
             </div>
-            <h2 className="section-title">Frequently Asked Questions</h2>
+            {isEmbedded ? (
+              <h2 className="section-title">Frequently Asked Questions</h2>
+            ) : (
+              <h1 className="section-title">Frequently Asked Questions</h1>
+            )}
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.2rem' }}>
               Everything you need to know about iptvswitzerland.cloud
             </p>

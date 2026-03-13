@@ -30,7 +30,11 @@ const Features = ({ isEmbedded = false }) => {
       <section className="section" style={{ paddingTop: isEmbedded ? '60px' : '120px', paddingBottom: isEmbedded ? '60px' : undefined }}>
         <div className="container markdown-content">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="section-title">Why IPTV Smarters Is the Best IPTV Player for Switzerland Subscribers</h1>
+            {isEmbedded ? (
+              <h2 className="section-title">Why IPTV Smarters Is the Best IPTV Player for Switzerland Subscribers</h2>
+            ) : (
+              <h1 className="section-title">Why IPTV Smarters Is the Best IPTV Player for Switzerland Subscribers</h1>
+            )}
             <p className="lead" style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '50px', textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px auto' }}>
               Stop settling for unstable streams, outdated interfaces, and IPTV apps that crash under pressure. Our comprehensive platform is purpose-built for subscribers who demand consistent HD and 4K performance, intuitive navigation, and the flexibility to watch on any device — anywhere in Switzerland or around the world.
             </p>

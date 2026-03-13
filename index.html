@@ -24,8 +24,28 @@
     <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="/src/assets/logo.avif" type="image/avif" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" />
     
+    <link rel="preload" as="image" href="/logo.avif" type="image/avif" />
+    
+    <style>
+      :root {
+        --color-dark-gray: #1e272e;
+        --color-white: #ffffff;
+      }
+      body {
+        background-color: var(--color-dark-gray);
+        color: var(--color-white);
+        margin: 0;
+        font-family: 'Outfit', sans-serif;
+      }
+      #root:empty {
+        background-color: var(--color-dark-gray);
+        min-height: 100vh;
+      }
+    </style>
+    
+    <link rel="modulepreload" href="/src/main.jsx" />
     <title>IPTV Suisse – High-Quality Streaming Switzerland</title>
   </head>
   <body>
