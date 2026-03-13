@@ -58,7 +58,7 @@ const Navbar = () => {
             <img src="/logo.avif" alt="Switzerland IPTV Logo" width="50" height="50" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <span style={{ fontSize: '1.5rem', fontWeight: '800', background: 'var(--success-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            IPTV Suisse
+            IPTV Switzerland
           </span>
         </Link>
 
