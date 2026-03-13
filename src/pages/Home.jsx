@@ -52,12 +52,7 @@ const Home = () => {
         <div className="container" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px', alignItems: 'center' }}>
           
           {/* Text Content */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}
-          >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
             <div style={{ display: 'inline-block', padding: '8px 16px', borderRadius: '30px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', alignSelf: 'flex-start' }}>
               <span style={{ color: 'var(--color-yellow)', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Zap size={16} fill="var(--color-yellow)" /> #1 Rated IPTV Provider in Switzerland
@@ -94,7 +89,7 @@ const Home = () => {
                 <CheckCircle size={18} color="var(--color-green)" /> 99.9% Uptime Server
               </div>
             </div>
-          </motion.div>
+            </div>
 
           {/* Visual Showcase */}
           <motion.div 
@@ -112,6 +107,7 @@ const Home = () => {
               boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
               border: '1px solid rgba(255,255,255,0.1)'
             }}>
+              <h2 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', border: 0 }}>Premium Features Overview</h2>
               <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.9)', marginBottom: '20px', lineHeight: 1.6 }}>
                 Our IPTV Switzerland platform supports every major device including <strong>Smart TVs, Firestick, Android boxes, iPhones, and MAG devices</strong>, giving you total freedom over how and where you watch. Activate your subscription within minutes and enjoy a zero-buffer streaming experience backed by servers optimized specifically for Switzerland's network infrastructure.
               </p>

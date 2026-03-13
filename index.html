@@ -30,22 +30,45 @@
     
     <style>
       :root {
+        --color-green: #2ecc71;
+        --color-dark-green: #27ae60;
+        --color-red: #e74c3c;
+        --color-yellow: #f1c40f;
+        --color-pink: #e84393;
+        --color-orange: #e67e22;
+        --color-brown: #d35400;
         --color-dark-gray: #1e272e;
+        --color-light-gray: #f5f6fa;
         --color-white: #ffffff;
+        --color-text: #2d3436;
+        --color-text-muted: #a0a0a0;
+        --nav-height: 80px;
+        --bg-gradient: linear-gradient(135deg, #1e272e, #2d3436);
+        --accent-gradient: linear-gradient(135deg, #e84393, #e74c3c);
+        --success-gradient: linear-gradient(135deg, #2ecc71, #27ae60);
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
       }
       body {
         background-color: var(--color-dark-gray);
         color: var(--color-white);
         margin: 0;
         font-family: 'Outfit', sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
       }
       #root:empty {
         background-color: var(--color-dark-gray);
         min-height: 100vh;
       }
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
     </style>
     
-    <link rel="modulepreload" href="/src/main.jsx" />
     <title>IPTV Suisse – High-Quality Streaming Switzerland</title>
   </head>
   <body>
