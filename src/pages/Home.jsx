@@ -92,12 +92,7 @@ const Home = () => {
             </div>
 
           {/* Visual Showcase */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ position: 'relative' }}
-          >
+          <div style={{ position: 'relative' }}>
             <div className="glass-panel" style={{ 
               padding: '30px', 
               borderRadius: '24px', 
@@ -179,7 +174,7 @@ const Home = () => {
               opacity: 0.6,
               animationDelay: '1s'
             }} className="floating"></div>
-          </motion.div>
+            </div>
         </div>
         
         {/* Mobile stacking adjustments via inline style tags for simplicity in standard react */}
