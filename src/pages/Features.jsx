@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Zap, MonitorPlay, Tv, Smartphone, ShieldCheck, HeadphonesIcon, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Predefined WhatsApp message
+const message = encodeURIComponent("I want subscription for iptvswitzerland.cloud");
+const whatsappUrl = `https://wa.me/447412300833?text=${message}`;
+
 const Features = ({ isEmbedded = false }) => {
   // variants removed for performance
 
@@ -32,7 +36,7 @@ const Features = ({ isEmbedded = false }) => {
               className="features-grid"
               style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}
             >
-              
+              {/* Feature cards */}
               <div className="glass-panel" style={{ padding: '30px', borderTop: '4px solid var(--color-green)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ padding: '15px', background: 'rgba(46, 204, 113, 0.1)', borderRadius: '15px' }}><Zap size={32} color="var(--color-green)" /></div>
@@ -103,14 +107,19 @@ const Features = ({ isEmbedded = false }) => {
 
             </div>
 
+            {/* Built-in WhatsApp buttons with prefilled message */}
             <div style={{ textAlign: 'center', marginTop: '60px' }}>
               <h2 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '20px', color: 'var(--color-white)' }}>Ready to Experience Smarter Television?</h2>
               <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)', marginBottom: '30px', maxWidth: '600px', margin: '0 auto 30px auto' }}>
                 Join thousands of satisfied Switzerland IPTV subscribers who have already made the switch to smarter, faster, more flexible television.
               </p>
               <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '16px 32px' }}>View Pricing Plans</a>
-                <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 32px' }}>Contact Support</a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '16px 32px' }}>
+                  View Pricing Plans
+                </a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 32px' }}>
+                  Contact Support
+                </a>
               </div>
             </div>
 
