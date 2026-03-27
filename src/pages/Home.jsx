@@ -6,7 +6,7 @@ import Pricing from './Pricing';
 import Features from './Features';
 import FAQ from './FAQ';
 const message = encodeURIComponent("I want subscription for iptvswitzerland.cloud");
-const whatsappUrl = `https://wa.me/447412300833?text=${message}`;
+const whatsappUrl = `https://api.whatsapp.com/send?phone=447412300833&text=${message}`;
 const Home = () => {
   return (
     <>
