@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { Check, Tv, Film, MonitorPlay, Smartphone, Users, RotateCcw, CalendarClock, Zap, ShieldCheck, HeadphonesIcon } from 'lucide-react';
 // motion removed for performance
-
+const message = encodeURIComponent("I want subscription for iptvswitzerland.cloud");
+const whatsappUrl = `https://api.whatsapp.com/send?phone=447412300833&text=${message}`;
 const Pricing = ({ isEmbedded = false }) => {
   const plans = [
     { title: '1 Month', price: 'CHF 15', duration: '/mo', highlight: false },
@@ -97,7 +98,7 @@ const Pricing = ({ isEmbedded = false }) => {
                   ))}
                 </ul>
 
-                <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" style={{ width: '100%', padding: '16px', display: 'block', textAlign: 'center', boxSizing: 'border-box' }} className={`btn ${plan.highlight ? 'btn-primary' : 'btn-secondary'}`}>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={{ width: '100%', padding: '16px', display: 'block', textAlign: 'center', boxSizing: 'border-box' }} className={`btn ${plan.highlight ? 'btn-primary' : 'btn-secondary'}`}>
                   Choose {plan.title}
                 </a>
               </div>
