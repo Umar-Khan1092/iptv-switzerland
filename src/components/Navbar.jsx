@@ -79,7 +79,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: '0.9rem' }}>
+          <a href="https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvswitzerland.cloud" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: '0.9rem' }}>
             Get Started
           </a>
         </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%', marginTop: '10px' }}>
+          <a href="https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptswizerland.cloud" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%', marginTop: '10px' }}>
             Get Started
           </a>
         </div>
