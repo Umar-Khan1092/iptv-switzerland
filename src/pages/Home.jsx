@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import Pricing from './Pricing';
 import Features from './Features';
 import FAQ from './FAQ';
-
+const message = encodeURIComponent("I want subscription for iptvswitzerland.cloud");
+const whatsappUrl = `https://wa.me/447412300833?text=${message}`;
 const Home = () => {
   return (
     <>
@@ -70,10 +71,10 @@ const Home = () => {
             </p>
             
             <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginTop: '10px' }}>
-              <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem' }}>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '16px 36px', fontSize: '1.1rem' }}>
                 <Play size={20} fill="currentColor" /> Start Watching Now
               </a>
-              <a href="https://wa.me/447412300833" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 36px', fontSize: '1.1rem' }}>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 36px', fontSize: '1.1rem' }}>
                 Setup Guide
               </a>
             </div>
